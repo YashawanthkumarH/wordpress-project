@@ -1,0 +1,10 @@
+api_version: 1
+web_docroot: true
+php_version: 7.3
+build_step: true
+workflows:
+  deploy_product:
+    after:
+      - description: post to slack after site creation completes using product
+        script: scripts/deploy_product.php
+        type: webphp
