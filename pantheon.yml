@@ -1,10 +1,10 @@
+# Put overrides to your pantheon.upstream.yml file here.
+# For more information, see: https://pantheon.io/docs/pantheon-yml/
 api_version: 1
-web_docroot: true
-php_version: 7.3
-build_step: true
+php_version: 7.4
 workflows:
   deploy_product:
     after:
-      - description: post to slack after site creation completes using product
+      - description: post to slack after sync code completes
         script: scripts/deploy_product.php
         type: webphp
